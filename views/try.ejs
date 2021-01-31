@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords"
+        content="CGPA calculator VIT, VIT CGPA CALCULATOR, VIT gpa calculator, gpa calculator VIT, devil-coder cgpa calculator, Raj Chandra vit cgpa calculator, VIT marks calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1b567e">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>Whatsapp groups</title>
+    <link rel="stylesheet" href="/index.css" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="https://www.vitrendz.tech">
+            <img src="https://drive.google.com/thumbnail?id=10bwXdT0UY1ElXcGkHDHiN3jpRSPEnQaQ" class="navLogo" alt=""
+                loading="lazy" />
+        </a>
+    </nav>
+    <div class="container appBody">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" role="alert">
+                    <div id="grades">Welcome ! <strong> Find your Class groups here
+                        </strong> </div>
+                </div>
+            </div>
+        </div>
+        <div class="complete jumbotron jumbotron-fluid">
+            <div class="card-container p-4 centered has-box-shadow row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10 col-sm-12 col-xs-12 centered">
+                    <div class="container-fluid">
+                        <div class="row head">
+                            <div class="form-control d-none d-xl-block col-xl title" name="courseCode">
+                                Course Code
+                            </div>
+                            <div class="form-control d-none d-xl-block col-xl title" name="courseName">
+                                Course Name
+                            </div>
+                            <div class="form-control d-none d-xl-block col-xl title" name="facultyName">
+                                Faculty Name
+                            </div>
+                            <div class="form-control d-none d-xl-block col-xl title" name="slot">
+                                Slot
+                            </div>
+                            <div class="form-control d-none d-xl-block col-xl title" name="grouplink">
+                                Whatsapp Link
+                            </div>
+                        </div>
+                    </div>
+                    <% for(var i=0;i<values.length;i++) {%>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="form-control col-sm-12 col-xl title" name="courseCode">
+                                    <%= values[i][0] %>
+                                </div>
+                                <div class="form-control col-sm-12 col-xl" name="courseName">
+                                    <%= values[i][1] %>
+                                </div>
+                                <div class="form-control col-sm-12 col-xl" name="facultyName">
+                                    <%= values[i][2] %>
+                                </div>
+                                <div class="form-control col-sm-12 col-xl" name="slot">
+                                    <%= values[i][3] %>
+                                </div>
+                                <div class="form-control col-sm-12 col-xl" name="grouplink">
+                                    <a href='<%= values[i][4] %>' target='_new'>Link</a>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        <% } %>
+                            <section>
+
+                                <button class="gbtn btn btn-block btn-lg btn-primary" id="gbtn"
+                                    onclick="window.open(' https://www.instagram.com/vitrendz ')">Follow Us for More
+                                    Updates</button>
+                                <p class="vitrends">Created with <i class="fas fa-heart"></i> by VITrendz</p>
+                            </section>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="modal-error" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-danger id=" modal-title">Error</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Got it</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script language="javascript" type="text/javascript" src="calculator.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>

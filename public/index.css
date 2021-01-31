@@ -1,0 +1,91 @@
+body {
+  background-image: linear-gradient(to bottom, darkgray, white);
+  font-family: sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  margin-top: -80px;
+  z-index: 2;
+}
+
+.navLogo {
+  object-fit: contain;
+  height: 35px;
+}
+
+.appBody {
+  margin-top: 80px;
+}
+
+.jumbotron {
+  padding: 0px;
+  background-color: beige !important;
+  box-shadow: 5px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  margin-bottom: 8px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.result-text {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 4px;
+}
+
+.fas {
+  color: red;
+}
+
+.head {
+  margin-bottom: 10px;
+}
+
+.title {
+  color: brown;
+  background-color: whitesmoke;
+}
+
+.button_vitrendz {
+  background-image: linear-gradient(
+    to right,
+    #dad299 0%,
+    #b0dab9 51%,
+    #dad299 100%
+  );
+  box-shadow: 0 0 20px #eee;
+  color: white;
+  border-radius: 10px;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* .button_vitrendz {
+  margin: 10px;
+  padding: 15px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+
+  border-radius: 10px;
+  display: block;
+} */
+
+.button_vitrendz:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
