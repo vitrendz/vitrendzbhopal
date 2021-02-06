@@ -24,7 +24,7 @@ function addtoarr(row) {
 
 async function accessSpreadsheet() {
   const doc = new GoogleSpreadsheet(
-    "1Gg2PGrtcGEG2uQtXeioAqrpcNbYtqywNudVssEB2SNE"
+    "1R2d3xSMgswiKmJzfJ5Oi0Cx9sEQVxkk-HWIO5mruFnk"
   );
   await promisify(doc.useServiceAccountAuth)(creds);
   const info = await promisify(doc.getInfo)();
